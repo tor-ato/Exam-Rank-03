@@ -34,7 +34,7 @@ char *get_next_line(int fd)
             break ;
         read_size = read(fd, &c, 1);
     }
-    if (!read_size)
+    if (!read_size || !i)
     {
         free(str_bfr);
         return NULL;
