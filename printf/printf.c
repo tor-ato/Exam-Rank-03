@@ -28,7 +28,7 @@ void put_nbr(long long  number, int base,int *len)
 		*len += write(1, "-", 1);
 		number *= -1;
 	}
-	if (number > 0 && number > base)
+	if (number >= base)
 		put_nbr(number / base, base , len);
 	*len += write(1, &"0123456789abcdef"[number % base], 1);
 }
@@ -61,31 +61,31 @@ int ft_printf(const char * format, ... )
 	return len;
 }
 
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 
-int main ()
-{
-	int ft_len = 0;
-	int or_len = 0;
-
-
-	// ft_len = ft_printf("%s\n","toto");
-	// or_len = printf("%s\n","toto");
-	// printf("ft_len = %d:\n",ft_len);
-	// printf("or_len = %d:\n",or_len);
-
-
-	
-	// ft_len = ft_printf("Magic %s is %d\n", "number", 4233);
-	// or_len = printf("Magic %s is %d\n", "number", 4233);
-	// printf("ft_len = %d:\n",ft_len);
-	// printf("or_len = %d:\n",or_len);
-
-
-	
-	ft_len = ft_printf("Hexadecimal for %d is %x\n", 42, 42);
-	or_len = printf("Hexadecimal for %d is %x\n", 42, 42);
-	printf("ft_len = %d:\n",ft_len);
-	printf("or_len = %d:\n",or_len);
-}
+/*int main ()*/
+/*{*/
+/*	int ft_len = 0;*/
+/*	int or_len = 0;*/
+/**/
+/**/
+/*	 ft_len = ft_printf("%s\n","toto");*/
+/*	 or_len = printf("%s\n","toto");*/
+/*	 printf("ft_len = %d:\n",ft_len);*/
+/*	 printf("or_len = %d:\n",or_len);*/
+/**/
+/**/
+/**/
+/*	 ft_len = ft_printf("Magic %s is %d\n", "number", 4233);*/
+/*	 or_len = printf("Magic %s is %d\n", "number", 4233);*/
+/*	 printf("ft_len = %d:\n",ft_len);*/
+/*	 printf("or_len = %d:\n",or_len);*/
+/**/
+/**/
+/**/
+/*	ft_len = ft_printf("Hexadecimal for %d is %x\n", 42, 42);*/
+/*	or_len = printf("Hexadecimal for %d is %x\n", 42, 42);*/
+/*	printf("ft_len = %d:\n",ft_len);*/
+/*	printf("or_len = %d:\n",or_len);*/
+/*}*/
